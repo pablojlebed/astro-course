@@ -4,7 +4,7 @@ Welcome to the **Astro Course - Finished Module Files** repository.
 
 This repository serves as a companion to the main Astro course content, which you can find on my website:
 
-➡️ **Access the full course text here:** https://www.pablolebed.dev/resources/courses/astro/astro/
+➡️ **Access the full course text here:** [Astro Course](https://www.pablolebed.dev/resources/courses/astro/astro/)
 
 Disclaimer: Since I learn best through reading, and often struggle to find quality learning material in that format, I started creating my own using **language models**. This is an example.
 

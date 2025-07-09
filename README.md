@@ -60,6 +60,6 @@ This project is licensed under the MIT License.
 
 ## 📧 Contact
 
-For any questions about the course or the code in this repo, please reach out via the contact information provided on [www.pablolebed.dev](https://www.google.com/search?q=https://www.pablolebed.dev).
+For any questions about the course or the code in this repo, please reach out via the contact information provided on [www.pablolebed.dev](https://www.pablolebed.dev).
 
 Happy coding with Astro!

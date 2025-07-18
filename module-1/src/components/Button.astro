@@ -1,0 +1,28 @@
+---
+interface Props {
+  text: string;
+  href?: string;
+  style?: "primary" | "secondary" | "outline";
+}
+
+const { text, href, style = "primary" } = Astro.props;
+
+if (style === "primary") {
+  buttonClasses += " bg-blue-600 text-white hover:bg-blue-700 shadow-md";
+} else if (style === "secondary") {
+  buttonClasses += "bg-gray-200 text-gray-800 hover:bg-gray-300";
+} else if (style === "outline") {
+  buttonClasses +=
+    " border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700";
+}
+---
+
+{
+  href ? (
+    <a href={href} class={buttonClasses}>
+      {text}
+    </a>
+  ) : (
+    <button class={buttonClasses}>{text}</button>
+  )
+}

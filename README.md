@@ -63,3 +63,6 @@ This project is licensed under the MIT License.
 For any questions about the course or the code in this repo, please reach out via the contact information provided on [www.pablolebed.dev](https://www.pablolebed.dev).
 
 Happy coding with Astro!
+
+----------------------------------------
+If you find this useful, feel free to star it or open an issue — even a hello goes a long way 😊

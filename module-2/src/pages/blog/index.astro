@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Card from "../../components/Card.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+const allBlogPosts = await getCollection("blog");
+const sortedPosts = allBlogPosts.sort(
+  (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
+);
+---
+
+<BaseLayout title="Blog">
+  <main class="container mx-auto px-4 py-16">
+    <SectionHeader
+      title="My Blog"
+      subtitle="Thoughts, tutorials, and insights on web development and beyond."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      {
+        sortedPosts.map((post) => (
+          <Card
+            title={post.data.title}
+            description={post.data.description}
+            imageSrc={post.data.image || "/images/placeholder-blog.avif"}
+            link={`/blog/${post.slug}`}
+          />
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>

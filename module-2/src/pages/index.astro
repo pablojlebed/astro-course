@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+---
+
+<BaseLayout title="Home">
+  <Hero
+    title="Hi, I'm Pablo!"
+    description="Welcome to my portfolio! Here you’ll find a collection of knowledge-sharing projects, web development assignments from Scrimba’s Front-End Developer Career Path, and the occasional useful idea. I am a Frontend Developer focused on building performant, accessible, and modern websites."
+    imageSrc="/images/profile.jpg"
+    buttonText="View My Work"
+    buttonHref="/projects"
+  />
+
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">
+      Latest Blog Posts
+    </h2>
+    <p class="text-center text-lg text-gray-600">
+      No blog posts yet, but they're coming soon!
+    </p>
+    {
+      /* In a later module, we'll fetch and loop through actual blog posts here */
+    }
+  </section>
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">
+      My Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Card
+        title="Project Alpha"
+        description="A brief description of Project Alpha, highlighting its key features and technologies used."
+        imageSrc="/images/project-alpha.png"
+        link="/projects/project-alpha"
+      />
+      <Card
+        title="Project Beta"
+        description="This project showcases my skills in [technology] and problem-solving."
+        imageSrc="/images/project-beta.png"
+        link="/projects/project-beta"
+      />
+      <Card
+        title="Project Gamma"
+        description="An exciting web application built with a focus on user experience and performance."
+        imageSrc="/images/project-gamma.png"
+        link="/projects/project-gamma"
+      />
+    </div>
+  </section>
+</BaseLayout>

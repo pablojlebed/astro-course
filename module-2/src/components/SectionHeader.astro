@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="mb-8 text-center">
+  <h2 class="text-3xl font-bold text-gray-900 mb-2">{title}</h2>
+  {subtitle && <p class="text-lg text-gray-600">{subtitle}</p>}
+</div>
+
+<style>
+  div {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+    color: #4b5563;
+  }
+</style>
